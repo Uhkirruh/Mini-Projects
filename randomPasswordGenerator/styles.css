@@ -1,0 +1,19 @@
+#container {
+  border: 2px solid black;
+  width: 300px;
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+  background-color: beige;
+}
+
+#randomBtn {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(205, 255, 236);
+  border: none;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 5px 3px hsl(0, 0%, 50%);
+}
