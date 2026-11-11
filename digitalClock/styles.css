@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wallpapersden.com%2Fimage%2Fdownload%2Fpersona-5-video-game_a2ZmbG6UmZqaraWkpJRobWllrWdma2U.jpg&f=1&nofb=1&ipt=a8f3682e575feb4ec346983b527c46f80ec9dd1364be7a501ae267f516d6879c&ipo=images);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#clock {
+  font-family: monospace;
+  font-size: 6.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(5px);
+  background-color: hsla(208, 100%, 97%, 0.116);
+  width: 100%;
+}
