@@ -115,14 +115,31 @@
 
 // clearTimeout(timeoutID)
 
-let timeoutId;
+// let timeoutId;
 
-function startTimer() {
-  timeoutId = setTimeout(() => window.alert("Hello"), 3000);
-  console.log("Started");
+// function startTimer() {
+//   timeoutId = setTimeout(() => window.alert("Hello"), 3000);
+//   console.log("Started");
+// }
+
+// function clearTimer() {
+//   clearTimeout(timeoutId);
+//   console.log("Cleared");
+// }
+
+//Synchronous  and Asynchronous
+
+function func1(callback) {
+  setTimeout(() => {
+    console.log("Task 1");
+    callback();
+  }, 3000);
 }
 
-function clearTimer() {
-  clearTimeout(timeoutId);
-  console.log("Cleared");
+function func2() {
+  console.log("Task 2");
+  console.log("Task 3");
+  console.log("Task 4");
 }
+
+func1(func2);
