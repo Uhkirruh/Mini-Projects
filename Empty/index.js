@@ -129,17 +129,127 @@
 
 //Synchronous  and Asynchronous
 
-function func1(callback) {
-  setTimeout(() => {
-    console.log("Task 1");
-    callback();
-  }, 3000);
-}
+// function func1(callback) {
+//   setTimeout(() => {
+//     console.log("Task 1");
+//     callback();
+//   }, 3000);
+// }
 
-function func2() {
-  console.log("Task 2");
-  console.log("Task 3");
-  console.log("Task 4");
-}
+// function func2() {
+//   console.log("Task 2");
+//   console.log("Task 3");
+//   console.log("Task 4");
+// }
 
-func1(func2);
+// func1(func2);
+
+// ADD AND CHANGE HTML
+
+// STEP 1 CREATE THE ELEMENT
+// const newH1 = document.createElement("h1");
+
+// STEP 2 ADD ATTRIBUTES/PROPERTIES
+// newH1.textContent = "I like Pizza!";
+// newH1.id = "myH1";
+// newH1.style.color = "tomato";
+// newH1.style.textAlign = "center";
+
+// STEP 3 APPEND ELEMENT TO DOM
+// document.body.append(newH1);
+// document.body.prepend(newH1);
+// document.getElementById("box1").append(newH1);
+// document.getElementById("box1").prepend(newH1);
+
+// const box2 = document.getElementById("box2");
+// document.body.insertBefore(newH1, box2);
+
+// const boxes = document.querySelectorAll(".box");
+// document.body.insertBefore(newH1, boxes[1]);
+
+// REMOVE THE HTML ELEMENT
+// document.getElementById("box1").removeChild(newH1);
+
+// EXAMPLE 3 <li>
+
+// STEP 1 CREATE THE ELEMENT
+// const newListItem = document.createElement("li");
+
+// // STEP 2 ADD ATTRIBUTES/PROPERTIES
+// newListItem.textContent = "coconut";
+// newListItem.id = "coconut";
+// newListItem.style.fontWeight = "bold";
+// newListItem.style.backgroundColor = "lightgreen";
+
+// // STEP 3 APPEND ELEMENT TO DOM
+// // document.body.append(newListItem);
+// // document.getElementById("fruits").prepend(newListItem);
+
+// // const orange = document.getElementById("orange");
+// // document.getElementById("fruits").insertBefore(newListItem, );
+
+// const listItems = document.querySelectorAll("#fruits li");
+// document.getElementById("fruits").insertBefore(newListItem, listItems[0]);
+
+const myBox = document.getElementById("myBox");
+
+// document.addEventListener("keydown", (event) => {
+//   myBox.textContent = ":P";
+//   myBox.style.backgroundColor = "tomato";
+// });
+
+// document.addEventListener("keyup", (event) => {
+//   myBox.textContent = ":D";
+//   myBox.style.backgroundColor = "lightblue";
+// });
+
+// const moveAmount = 100;
+// let x = 0;
+// let y = 0;
+
+// document.addEventListener("keydown", (event) => {
+//   myBox.textContent = ":P";
+//   myBox.style.backgroundColor = "tomato";
+// });
+
+// document.addEventListener("keyup", (event) => {
+//   myBox.textContent =  ":D";
+//   myBox.style.backgroundColor = "lightblue";
+// });
+
+// document.addEventListener("keydown", (event) => {
+//   event.preventDefault();
+
+//   if (event.key.startsWith("Arrow")) {
+//     switch (event.key) {
+//       case "ArrowUp":
+//         y -= moveAmount;
+//         break;
+//       case "ArrowDown":
+//         y += moveAmount;
+//         break;
+//       case "ArrowLeft":
+//         x -= moveAmount;
+//         break;
+//       case "ArrowRight":
+//         x += moveAmount;
+//         break;
+//     }
+//     myBox.style.top = `${y}px`;
+//     myBox.style.left = `${x}px`;
+//   }
+// });
+
+const myButton = document.getElementById("myButton");
+
+const myImg = document.getElementById("myImg");
+
+myButton.addEventListener("click", (event) => {
+  if (myImg.style.visibility === "hidden") {
+    myImg.style.visibility = "visible";
+    myButton.textContent = "Hide";
+  } else {
+    myImg.style.visibility = "hidden";
+    myButton.textContent = "Show";
+  }
+});
