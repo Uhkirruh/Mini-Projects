@@ -240,16 +240,51 @@ const myBox = document.getElementById("myBox");
 //   }
 // });
 
-const myButton = document.getElementById("myButton");
+// const myButton = document.getElementById("myButton");
 
-const myImg = document.getElementById("myImg");
+// const myImg = document.getElementById("myImg");
 
-myButton.addEventListener("click", (event) => {
-  if (myImg.style.visibility === "hidden") {
-    myImg.style.visibility = "visible";
-    myButton.textContent = "Hide";
-  } else {
-    myImg.style.visibility = "hidden";
-    myButton.textContent = "Show";
+// myButton.addEventListener("click", (event) => {
+//   if (myImg.style.visibility === "hidden") {
+//     myImg.style.visibility = "visible";
+//     myButton.textContent = "Hide";
+//   } else {
+//     myImg.style.visibility = "hidden";
+//     myButton.textContent = "Show";
+//   }
+// });
+
+// FETCH API
+
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch(console.error((error) => console.log(error)));
+
+// ASYNC AND AWAIT
+
+async function fetchData() {
+  try {
+    const pokemonName = document
+      .getElementById("pokemonName")
+      .value.toLowerCase();
+
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`,
+    );
+
+    if (!response.ok) {
+      throw new Error("Could not fetch resources");
+    }
+
+    const data = await response.json();
+    const pokemonSprite = data.sprites.front_shiny;
+    const imgElement = document.getElementById("pokemonSprite");
+
+    imgElement.src = pokemonSprite;
+    imgElement.style.display = "block";
+    console.log(data.types);
+  } catch (error) {
+    console.log(error);
   }
-});
+}
